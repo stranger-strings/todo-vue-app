@@ -23,6 +23,20 @@ var HomePage = {
     },
     completeTask: function(inputTask) {
       inputTask.completed = !inputTask.completed;
+    },
+    getNumberOfIncompleteTasks: function() {
+      var count = 0;
+      this.tasks.forEach(function(task) {
+        if (!task.completed) {
+          count = count + 1;
+        }
+      });
+      return count;
+      // OR USE THE FILTER METHOD
+      // var incompleteTasks = this.tasks.filter(function(task) {
+      //   return !task.completed;
+      // });
+      // return incompleteTasks.length;
     }
   },
   computed: {}

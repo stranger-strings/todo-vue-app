@@ -23,6 +23,7 @@
 <template id="home-page">
   <div>
     <h1>{{ message }}</h1>
+    <h4>Number of tasks: {{ getNumberOfIncompleteTasks() }}</h4>
     <ul>
       <li v-for="task in tasks" v-on:click="completeTask(task)">
         <p v-bind:class="{completed: task.completed}">{{ task.text }}</p>
