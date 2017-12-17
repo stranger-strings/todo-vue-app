@@ -4,7 +4,12 @@ var HomePage = {
   template: "#home-page",
   data: function() {
     return {
-      message: "Welcome to Vue.js!"
+      message: "Welcome to Vue.js!",
+      tasks: [
+        { id: 1, text: "Take out the garbage", completed: false },
+        { id: 2, text: "Make the bed", completed: false },
+        { id: 3, text: "Mow the lawn", completed: false }
+      ]
     };
   },
   mounted: function() {},
