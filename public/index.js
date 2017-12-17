@@ -22,8 +22,7 @@ var HomePage = {
       }
     },
     completeTask: function(inputTask) {
-      var index = this.tasks.indexOf(inputTask);
-      this.tasks.splice(index, 1);
+      inputTask.completed = !inputTask.completed;
     }
   },
   computed: {}
