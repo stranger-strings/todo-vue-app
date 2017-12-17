@@ -24,6 +24,19 @@ var HomePage = {
     completeTask: function(inputTask) {
       inputTask.completed = !inputTask.completed;
     },
+    deleteCompletedTasks: function() {
+      var incompleteTasks = [];
+      this.tasks.forEach(function(task) {
+        if (!task.completed) {
+          incompleteTasks.push(task);
+        }
+      });
+      this.tasks = incompleteTasks;
+      // OR USE THE FILTER METHOD
+      // this.tasks = this.tasks.filter(function(task) {
+      //   return !task.completed;
+      // });
+    },
     getNumberOfIncompleteTasks: function() {
       var count = 0;
       this.tasks.forEach(function(task) {
