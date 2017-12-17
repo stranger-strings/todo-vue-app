@@ -20,6 +20,10 @@ var HomePage = {
         this.tasks.push(this.newTask);
         this.newTask = { text: "", completed: false };
       }
+    },
+    completeTask: function(inputTask) {
+      var index = this.tasks.indexOf(inputTask);
+      this.tasks.splice(index, 1);
     }
   },
   computed: {}
