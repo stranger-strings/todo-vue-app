@@ -23,5 +23,10 @@
         {{ task.text }}
       </li>
     </ul>
+
+    <h4>Add a task</h4>
+    <input v-model="newTask.text">
+    <button v-on:click="addTask()">Add task</button>
+    
   </div>
 </template>

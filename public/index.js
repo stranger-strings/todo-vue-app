@@ -9,11 +9,19 @@ var HomePage = {
         { id: 1, text: "Take out the garbage", completed: false },
         { id: 2, text: "Make the bed", completed: false },
         { id: 3, text: "Mow the lawn", completed: false }
-      ]
+      ],
+      newTask: { text: "", completed: false }
     };
   },
   mounted: function() {},
-  methods: {},
+  methods: {
+    addTask: function() {
+      if (this.newTask.text) {
+        this.tasks.push(this.newTask);
+        this.newTask = { text: "", completed: false };
+      }
+    }
+  },
   computed: {}
 };
 
